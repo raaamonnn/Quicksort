@@ -1,0 +1,94 @@
+*****************************
+*** QUICKSORT PERFORMANCE ***
+*****************************
+
+*** ARRAY SIZE: 5000 ***
+First 10 and Last 10 digits before quicksort: 1,6,5,4,6,3,3,2,2,1,0,3,5,5,7,6,8,9,6,8
+First 10 and Last 10 digits after quicksort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+First Pivot: 0.02s
+Middle Pivot: 0.01s
+Random Pivot: 0.01s
+
+*** ARRAY SIZE: 10000 ***
+First 10 and Last 10 digits before quicksort: 1,6,5,4,6,3,3,2,2,1,4,4,9,1,8,0,0,4,6,4
+First 10 and Last 10 digits after quicksort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+First Pivot: 0.08s
+Middle Pivot: 0.02s
+Random Pivot: 0.02s
+
+*** ARRAY SIZE: 50000 ***
+First 10 and Last 10 digits before quicksort: 1,6,5,4,6,3,3,2,2,1,4,1,2,2,6,7,1,5,4,3
+First 10 and Last 10 digits after quicksort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+First Pivot: 0.53s
+Middle Pivot: 0.47s
+Random Pivot: 0.47s
+
+BIG O QUICKSORT O(nlog(n))
+----------------
+Each passing through the array (partitioning) takes O(n) operations.
+Each partitioning divides the array approximately into two parts which equates to log(n).
+
+--------------------------
+
+******************************************
+*** HEAPSORT AND MERGESORT PERFORMANCE ***
+******************************************
+
+HEAPSORT AND MERGESORT WITH ARRAY SIZE: 50000
+First 10 and Last 10 digits before HeapSort: 5,0,8,8,3,8,8,4,4,3,8,7,5,9,9,7,6,4,3,5
+HEAPSORT TOOK 75000 STATEMENTS
+First 10 and Last 10 digits after HeapSort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+
+
+First 10 and Last 10 digits before MergeSort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+MERGESORT TOOK 49999 STATEMENTS
+First 10 and Last 10 digits after MergeSort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+
+--------------------------
+
+*** HEAPSORT AND MERGESORT WITH ARRAY SIZE: 75000 ***
+First 10 and Last 10 digits before HeapSort: 5,0,8,8,3,8,8,4,4,3,7,8,8,7,7,7,8,1,8,5
+HEAPSORT TOOK 112500 STATEMENTS
+First 10 and Last 10 digits after HeapSort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+
+
+First 10 and Last 10 digits before MergeSort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+MERGESORT TOOK 74999 STATEMENTS
+First 10 and Last 10 digits after MergeSort: 0,0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,9
+
+BIG O HEAPSORT
+----------------
+Heap operations of Heapify Traverses through the heap (O(log(n))) and the element (O(n)) being sifted drops down a
+level after the operations are done.
+Therefore the total running time of HeapSort is O(n log n).
+
+BIG O MERGESORT
+---------------
+Entire input (O(n)) must be iterated through, in addition to the entire input being halved (O(log(n))).
+In total we have O(n * log n) operations.
+
+
+--------------------------
+
+******************
+*** RADIX SORT ***
+******************
+
+ORDER OF STRINGS EACH PASS
+1) zedsd kdfaa qqqqq rkdsb zabaa absqa kerpt ksjtr asdsd acdes
+2) kerpt acdes ksjtr qqqqq zedsd asdsd rkdsb kdfaa zabaa absqa
+3) ksjtr zedsd asdsd rkdsb qqqqq absqa kerpt acdes kdfaa zabaa
+4) absqa kerpt qqqqq ksjtr kdfaa zedsd asdsd rkdsb acdes zabaa
+5) ksjtr asdsd qqqqq rkdsb kerpt zedsd kdfaa acdes absqa zabaa
+
+Sorted Data
+-> absqa
+-> acdes
+-> asdsd
+-> kdfaa
+-> kerpt
+-> ksjtr
+-> qqqqq
+-> rkdsb
+-> zabaa
+-> zedsd
